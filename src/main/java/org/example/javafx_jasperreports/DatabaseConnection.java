@@ -18,7 +18,6 @@ public class DatabaseConnection {
                 System.out.println("Conexión a SQLite establecida.");
             } catch (SQLException e) {
                 System.err.println("Error al conectar con la base de datos: " + e.getMessage());
-                e.printStackTrace();
             }
         }
         return connection;
@@ -33,7 +32,6 @@ public class DatabaseConnection {
                 System.out.println("Conexión a SQLite cerrada.");
             } catch (SQLException e) {
                 System.err.println("Error al cerrar la conexión: " + e.getMessage());
-                e.printStackTrace();
             }
         }
     }

@@ -7,10 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.InputStream;
@@ -35,6 +32,7 @@ public class ArtistasController {
 
     @FXML
     private TextField searchField;
+
     public void cargarArtistasDesdeDB() {
         String query = "SELECT ArtistId, Name FROM artists";
 
@@ -47,80 +45,90 @@ public class ArtistasController {
             while (rs.next()) {
                 int artistId = rs.getInt("ArtistId");
                 String nombreArtista = rs.getString("Name");
-                // Concatenar ID y nombre para mostrarlo
                 artistasList.add(artistId + " - " + nombreArtista);
             }
+
+            if (artistasList.isEmpty()) {
+                System.out.println("No se encontraron artistas en la base de datos.");
+            } else {
+                System.out.println("Artistas cargados correctamente.");
+            }
+
+            listViewArtistas.setItems(artistasList);
+
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error al cargar artistas desde la base de datos: " + e.getMessage());
         }
-
-        if (artistasList.isEmpty()) {
-            System.out.println("No se encontraron artistas en la base de datos.");
-        }
-
-        // Asignar la lista al ListView
-        listViewArtistas.setItems(artistasList);
     }
 
     @FXML
     private void generarInforme() {
-        // Obtener el artista seleccionado
         String artistaSeleccionado = listViewArtistas.getSelectionModel().getSelectedItem();
         if (artistaSeleccionado != null) {
             System.out.println("Generando informe para: " + artistaSeleccionado);
 
-            // Obtener el ID del artista seleccionado (extraído del string en el ListView)
-            String[] artistaParts = artistaSeleccionado.split(" - ");
-            int artistId = Integer.parseInt(artistaParts[0]);
-            String nombreArtista = artistaParts[1];
+            try {
+                String[] artistaParts = artistaSeleccionado.split(" - ");
+                int artistId = Integer.parseInt(artistaParts[0]);
+                String nombreArtista = artistaParts[1];
 
-            // Generar el informe de artistas
-            generarInformeDeArtistas(artistId, nombreArtista);
+                generarInformeDeArtistas(artistId, nombreArtista);
+            } catch (NumberFormatException e) {
+                System.err.println("Error al procesar el ID del artista seleccionado: " + artistaSeleccionado);
+            }
+
         } else {
-            System.out.println("Por favor, seleccione un artista.");
+            System.out.println("Por favor, seleccione un artista antes de generar el informe.");
         }
     }
 
     private void generarInformeDeArtistas(int artistId, String nombreArtista) {
-        try {
-            // Establecer conexión con la base de datos
-            Connection connection = DatabaseConnection.getConnection();
+        Connection connection;
+        InputStream reportStream = null;
 
-            // Cargar el archivo JRXML desde los recursos
-            InputStream reportStream = getClass().getResourceAsStream("/jasper/ReportArtistas.jrxml");
+        try {
+            connection = DatabaseConnection.getConnection();
+
+            reportStream = getClass().getResourceAsStream("/jasper/ReportArtistas.jrxml");
             if (reportStream == null) {
-                throw new RuntimeException("No se pudo encontrar el archivo de informe de artistas");
+                throw new RuntimeException("No se encontró el archivo de informe 'ReportArtistas.jrxml' en los recursos.");
             }
 
-            // Compilar el informe
             JasperReport report = JasperCompileManager.compileReport(reportStream);
 
-            // Establecer los parámetros para el informe (ID del artista y nombre)
             Map<String, Object> parameters = new HashMap<>();
             parameters.put("ARTISTA_ID", artistId);
             parameters.put("ARTISTA_NOMBRE", nombreArtista);
 
-            // Llenar el informe con datos de la base de datos
             JasperPrint print = JasperFillManager.fillReport(report, parameters, connection);
 
-            // Mostrar el informe
             JasperViewer.viewReport(print, false);
+            System.out.println("Informe generado correctamente para el artista: " + nombreArtista);
 
+        } catch (JRException e) {
+            System.err.println("Error al generar el informe Jasper: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Error de conexión con la base de datos al generar el informe: " + e.getMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error inesperado al generar el informe: " + e.getMessage());
+        } finally {
+            if (reportStream != null) {
+                try {
+                    reportStream.close();
+                } catch (Exception e) {
+                    System.err.println("Error al cerrar el archivo de informe: " + e.getMessage());
+                }
+            }
         }
     }
 
-    // Metodo de búsqueda
     @FXML
     private void handleSearch() {
         String searchText = searchField.getText().toLowerCase().trim();
 
         if (searchText.isEmpty()) {
-            // Restaurar la lista original si no hay filtro
             listViewArtistas.setItems(artistasList);
         } else {
-            // Filtrar sobre la lista almacenada en memoria
             List<String> artistasFiltrados = artistasList.stream()
                     .filter(artista -> artista.toLowerCase().contains(searchText))
                     .collect(Collectors.toList());
