@@ -1,0 +1,69 @@
+/* Estilo general para el AnchorPane */
+AnchorPane {
+    -fx-background-color: #f4f4f4;
+}
+
+/* Estilo para el VBox */
+VBox {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+/* Estilo para los botones */
+Button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #0078D7;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+/* Estilo del ListView */
+.list-view {
+    -fx-border-color: #a1a1a1;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.list-cell {
+    -fx-padding: 8px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #d1d1d1;
+    -fx-font-family: "Arial";
+}
+
+.list-cell:filled:selected, .list-cell:filled:selected:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+/* Efecto hover en los botones */
+Button:hover {
+    -fx-background-color: #005A9E;
+}
+
+/* Efecto de clic en los botones */
+Button:pressed {
+    -fx-background-color: #003E73;
+}
+
+/* Estilo específico para el botón de cerrar */
+#btnCerrar {
+    -fx-background-color: #D9534F;
+}
+
+#btnCerrar:hover {
+    -fx-background-color: #C9302C;
+}
+
+#btnCerrar:pressed {
+    -fx-background-color: #A52A2A;
+}
