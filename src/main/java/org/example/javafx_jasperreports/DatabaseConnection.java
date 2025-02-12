@@ -7,7 +7,6 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private static final String URL = "jdbc:sqlite:C:/Users/juanf/IdeaProjects/JavaFX_JasperReports/database/chinook.db";
     private static Connection connection = null;
-
     private DatabaseConnection() {}
 
     // Metodo para obtener la conexión a la base de datos

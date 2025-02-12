@@ -28,7 +28,6 @@ public class JasperReportsApp extends Application {
 
     @Override
     public void stop() {
-        // Cerrar la conexión a la base de datos cuando la aplicación se cierre
         DatabaseConnection.closeConnection();
     }
 
