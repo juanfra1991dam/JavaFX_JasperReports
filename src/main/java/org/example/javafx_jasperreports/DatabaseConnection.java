@@ -1,11 +1,12 @@
 package org.example.javafx_jasperreports;
 
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:sqlite:C:/Users/juanf/IdeaProjects/JavaFX_JasperReports/database/chinook.db";
+    private static final String URL = "jdbc:sqlite:" + Paths.get("database", "chinook.db").toAbsolutePath();
     private static Connection connection = null;
     private DatabaseConnection() {}
 

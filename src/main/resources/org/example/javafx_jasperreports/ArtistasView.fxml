@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="450.0" prefWidth="550.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafx_jasperreports.ArtistasController">
-    <TextField fx:id="searchField" layoutX="7.0" layoutY="14.0" onKeyReleased="#handleSearch" prefHeight="30.0" prefWidth="554.0" promptText="Buscar por título..." />
+    <TextField fx:id="searchField" layoutX="7.0" layoutY="14.0" onKeyReleased="#handleSearch" prefHeight="30.0" prefWidth="554.0" promptText="Buscar por artista..." />
     <ListView fx:id="listViewArtistas" layoutX="6.0" layoutY="56.0" prefHeight="238.0" prefWidth="554.0" />
     <Button layoutX="209.0" layoutY="321.0" onAction="#generarInforme" text="Generar Informe" />
     <Button fx:id="btnCerrar" layoutX="455.0" layoutY="395.0" onAction="#cerrarVentana" text="Cerrar" />

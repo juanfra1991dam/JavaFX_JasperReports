@@ -111,12 +111,6 @@ public class ArtistasController {
         }
     }
 
-    @FXML
-    private void cerrarVentana() {
-        Stage stage = (Stage) btnCerrar.getScene().getWindow();
-        stage.close();
-    }
-
     // Metodo de búsqueda
     @FXML
     private void handleSearch() {
@@ -133,5 +127,11 @@ public class ArtistasController {
 
             listViewArtistas.setItems(FXCollections.observableArrayList(artistasFiltrados));
         }
+    }
+
+    @FXML
+    private void cerrarVentana() {
+        Stage stage = (Stage) btnCerrar.getScene().getWindow();
+        stage.close();
     }
 }
