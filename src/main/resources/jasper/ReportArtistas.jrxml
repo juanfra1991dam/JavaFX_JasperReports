@@ -65,10 +65,8 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 					<textFieldExpression><![CDATA[$P{ARTISTA_NOMBRE}]]></textFieldExpression>
 				</textField>
 				<image>
-					<reportElement x="449" y="8" width="95" height="51" uuid="99eed93a-682a-42c8-8915-925e4f868740">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<imageExpression><![CDATA["C:/Users/juanf/IdeaProjects/JavaFX_JasperReports/src/main/resources/img/teatro.jpg"]]></imageExpression>
+					<reportElement x="440" y="9" width="98" height="57" uuid="04f81cab-04ad-42ee-ad7d-8fca1fa16928"/>
+					<imageExpression><![CDATA["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihs4bZ3jRNmucyjCW2BL2lKIMvbZ6fVFm8SpVir_6m0hRmD8c0-DokcudlLIO9fxgTYtakHoqu5xF41qIXxTpXb2Jo_O6FkDJnF45nAlMEpUAm7Yo1Hl6b7jdOSq_L1rpY8vvyo5BaoCRO/w1200-h630-p-k-no-nu/teatro.jpg"]]></imageExpression>
 				</image>
 			</frame>
 			<frame>
@@ -93,7 +91,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 				<reportElement style="Column header" x="0" y="7" width="240" height="18" forecolor="#000000" uuid="3005640c-3ef3-4de9-a339-957ada3dc79a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cb6f65-026a-4a04-9567-771e06833903"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Titulo Album]]></text>
@@ -102,7 +100,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 				<reportElement style="Column header" x="240" y="7" width="70" height="18" forecolor="#000000" uuid="c3ae6e19-6ebc-4650-a17c-6be8ed409b53">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bcd1160-3fca-4fd3-9318-b81a3b8a25c4"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Id Album]]></text>
@@ -111,7 +109,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 				<reportElement style="Column header" x="310" y="7" width="50" height="18" forecolor="#000000" uuid="55648ff8-0706-410b-b367-6a3260dfcc6b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cb6f65-026a-4a04-9567-771e06833903"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Id Pista]]></text>
@@ -120,7 +118,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 				<reportElement style="Column header" x="360" y="7" width="192" height="18" forecolor="#000000" uuid="3ab0c536-14da-4d18-876c-1e763f2e9e28">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cb6f65-026a-4a04-9567-771e06833903"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Pista]]></text>
@@ -138,7 +136,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 					<reportElement style="Detail" positionType="Float" x="0" y="0" width="240" height="18" uuid="5682b1b2-2de0-4531-a2b1-3f6af3f11b3f">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cb6f65-026a-4a04-9567-771e06833903"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Title}]]></textFieldExpression>
@@ -147,7 +145,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 					<reportElement style="Detail" positionType="Float" x="240" y="0" width="70" height="18" uuid="72c0a2d3-be14-44a7-9b2c-033e6a0b02db">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bcd1160-3fca-4fd3-9318-b81a3b8a25c4"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{AlbumId}]]></textFieldExpression>
@@ -156,7 +154,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 					<reportElement style="Detail" positionType="Float" x="310" y="0" width="50" height="18" uuid="9d9eaa76-7859-4bed-8578-93df419610f1">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2bcd1160-3fca-4fd3-9318-b81a3b8a25c4"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{TrackId}]]></textFieldExpression>
@@ -165,7 +163,7 @@ AND ArtistId = $P{ARTISTA_ID}]]>
 					<reportElement style="Detail" positionType="Float" x="360" y="0" width="192" height="18" uuid="8d63a55a-8033-46b9-8825-a732a2cdf9ba">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73cb6f65-026a-4a04-9567-771e06833903"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>

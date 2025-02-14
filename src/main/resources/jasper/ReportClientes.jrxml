@@ -128,8 +128,8 @@ FROM customers]]>
 					<text><![CDATA[Listado de clientes]]></text>
 				</staticText>
 				<image>
-					<reportElement x="452" y="16" width="97" height="62" uuid="850126f1-6625-4420-ad90-af0ff692cfcf"/>
-					<imageExpression><![CDATA["C:/Users/juanf/IdeaProjects/JavaFX_JasperReports/src/main/resources/img/mercadona.png"]]></imageExpression>
+					<reportElement x="446" y="17" width="97" height="60" uuid="714b3ce4-75ab-4d69-8236-9c92bb2959ca"/>
+					<imageExpression><![CDATA["https://logos-world.net/wp-content/uploads/2022/04/Mercadona-Symbol.png"]]></imageExpression>
 				</image>
 			</frame>
 			<frame>
@@ -154,7 +154,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="0" y="8" width="60" height="18" forecolor="#000000" uuid="01868eeb-9368-4eaf-a27b-e81208544195">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01540cb0-3b91-47cc-8bde-2a25d105403c"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Id Cliente]]></text>
@@ -163,7 +163,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="60" y="8" width="80" height="18" forecolor="#000000" uuid="a96dcd04-14b4-4f5d-95b2-128f0746ed58">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47fae05b-8955-46b1-a4cc-881625f1543d"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Nombre]]></text>
@@ -172,7 +172,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="220" y="8" width="90" height="18" forecolor="#000000" uuid="3a6c7b28-90a7-46af-951c-6effafff4e76">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="814beae6-9dc9-4c91-bc48-b1b8e0289673"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Compañia]]></text>
@@ -181,7 +181,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="140" y="8" width="80" height="18" forecolor="#000000" uuid="cc3d1f99-8c59-4022-aeea-2fcbfba236e5">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cb7ee9e-d862-467e-967f-e006388a5cdb"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Apellidos]]></text>
@@ -190,7 +190,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="310" y="8" width="90" height="18" forecolor="#000000" uuid="da9a5fde-b22a-4962-a575-b23e556e5bdd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edf1f76d-b2cf-4903-8b79-348e1c671e6a"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Direccion]]></text>
@@ -199,7 +199,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="400" y="8" width="46" height="18" forecolor="#000000" uuid="18274b2e-a338-4dc9-be55-38d1259cafc7">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5364f7e-2533-462a-88d8-2ed3d253afca"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Ciudad]]></text>
@@ -208,7 +208,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="447" y="8" width="52" height="18" forecolor="#000000" uuid="5fce323a-8de1-4ba7-b831-27f930c8e574">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9848755c-15de-4137-86f2-5e0d5afac281"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Telefono]]></text>
@@ -217,7 +217,7 @@ FROM customers]]>
 				<reportElement style="Column header" x="499" y="8" width="54" height="18" forecolor="#000000" uuid="9ffde0a0-075f-49af-9ae5-db5ef86d7c95">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2fc83bb-8454-4483-bbc7-e8a0f7abd2ec"/>
 				</reportElement>
-				<textElement textAlignment="Center">
+				<textElement textAlignment="Left">
 					<font isBold="false"/>
 				</textElement>
 				<text><![CDATA[Email]]></text>
@@ -233,7 +233,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="0" y="0" width="60" height="18" uuid="ebf15968-6fa2-449f-894b-2664f357118a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="01540cb0-3b91-47cc-8bde-2a25d105403c"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{CustomerId}]]></textFieldExpression>
@@ -242,7 +242,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="60" y="0" width="80" height="18" uuid="ac59d5c6-9254-4e2c-a404-d8c9500aa580">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47fae05b-8955-46b1-a4cc-881625f1543d"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
@@ -251,7 +251,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="220" y="0" width="90" height="18" uuid="5551a6f3-e204-4db2-9511-5e669aaf7ab0">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="814beae6-9dc9-4c91-bc48-b1b8e0289673"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Company}]]></textFieldExpression>
@@ -260,7 +260,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="140" y="0" width="80" height="18" uuid="693fb195-754a-44e8-bb8b-3f1d070bcc8b">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2cb7ee9e-d862-467e-967f-e006388a5cdb"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
@@ -269,7 +269,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="310" y="0" width="90" height="18" uuid="b5abf79e-ec45-453c-ba9e-26957d40a4b5">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="edf1f76d-b2cf-4903-8b79-348e1c671e6a"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
@@ -278,7 +278,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="400" y="0" width="46" height="18" uuid="c1c9d1a1-2b0c-43b8-8101-29eb0bf76959">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5364f7e-2533-462a-88d8-2ed3d253afca"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{City}]]></textFieldExpression>
@@ -287,7 +287,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="447" y="0" width="52" height="18" uuid="d89cd71d-faff-4d4f-8ffe-eff519337b79">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9848755c-15de-4137-86f2-5e0d5afac281"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
@@ -296,7 +296,7 @@ FROM customers]]>
 					<reportElement style="Detail" positionType="Float" x="499" y="0" width="54" height="18" uuid="971e60a5-9c3c-416b-ad52-65fc480041ed">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2fc83bb-8454-4483-bbc7-e8a0f7abd2ec"/>
 					</reportElement>
-					<textElement textAlignment="Center">
+					<textElement textAlignment="Left">
 						<font size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
