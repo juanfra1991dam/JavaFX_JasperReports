@@ -51,7 +51,7 @@ public class ArtistasController {
             if (artistasList.isEmpty()) {
                 System.out.println("No se encontraron artistas en la base de datos.");
             } else {
-                System.out.println("Artistas cargados correctamente.");
+                System.out.println("Artistas cargados correctamente");
             }
 
             listViewArtistas.setItems(artistasList);

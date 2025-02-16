@@ -85,7 +85,6 @@ public class JasperReportsController {
             controller.cargarArtistasDesdeDB();
 
             stage.show();
-            System.out.println("Ventana de artistas abierta correctamente.");
 
         } catch (IOException e) {
             System.err.println("Error al abrir la ventana de artistas: " + e.getMessage());

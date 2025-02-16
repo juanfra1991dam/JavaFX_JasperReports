@@ -38,7 +38,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.19.1</version> <!-- Versión más estable para la integración con JavaFX -->
+            <version>6.21.0</version>
         </dependency>
 
         <!-- JUnit dependencies for testing -->

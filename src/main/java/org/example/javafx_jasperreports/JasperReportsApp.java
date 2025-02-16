@@ -21,7 +21,7 @@ public class JasperReportsApp extends Application {
 
         // Configurar la escena y mostrarla
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Aplicación JavaFX con SQLite");
+        primaryStage.setTitle("Aplicación JavaFX con JasperReports");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
